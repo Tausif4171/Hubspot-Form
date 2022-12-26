@@ -18,8 +18,8 @@ useEffect(() => {
         if (window.hbspt) {
             // @TS-ignore
             window.hbspt.forms.create({
-                portalId: '23633466',
-                formId: '5641b914-ab3b-4e0d-a6de-a1869c557d6c',
+                portalId: '6485032',
+                formId: '9fc93abc-a8c7-48de-a6d5-2a3c1583e64f',
                 target: '#my-hubspot-form'
             })
         }
