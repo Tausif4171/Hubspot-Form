@@ -28,7 +28,7 @@ useEffect(() => {
 
   return ( 
     <div style={{margin:"0px 120px"}}>
-      <h1>Hubspot Form</h1>
+      <h1 style={{color:"#ff7a59"}}>Hubspot Form</h1>
       <div id="my-hubspot-form"></div>
     </div>
   );
