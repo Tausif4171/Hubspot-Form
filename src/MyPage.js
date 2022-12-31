@@ -32,7 +32,7 @@ function MyPage(props) {
   return (
     <div style={{ margin: "0px 120px" }}>
       <h1 style={{ color: "#ff7a59" }}>Hubspot Form</h1>
-      <button onClick={() => setShow(true)}>CTAs</button>
+      <button onClick={() => setShow(true)}>FORM</button>
       <div id="my-hubspot-form"></div>
     </div>
   );
