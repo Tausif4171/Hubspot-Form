@@ -77,7 +77,7 @@ function MyPage(props) {
     script.src = "https://js.hsforms.net/forms/v2.js";
     document.body.appendChild(script);
 
-    if (show) {
+    if (open) {
       script.addEventListener("load", () => {
         // @TS-ignore
         if (window.hbspt) {
@@ -90,7 +90,7 @@ function MyPage(props) {
         }
       });
     }
-  }, [show]);
+  }, [open]);
 
   return (
     <div style={{ margin: "0px 120px" }}>
@@ -105,7 +105,7 @@ function MyPage(props) {
       >
         FORM
       </button>
-      <div id="my-hubspot-form"></div>
+      {/* <div id="my-hubspot-form"></div> */}
 
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
         Open dialog
@@ -118,28 +118,14 @@ function MyPage(props) {
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
           Modal title
         </DialogTitle>
-        <DialogContent dividers>
-          <Typography gutterBottom>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros.
-          </Typography>
-          <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor.
-          </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-            dui. Donec ullamcorper nulla non metus auctor fringilla.
-          </Typography>
+        <DialogContent>
+          <div id="my-hubspot-form"></div>
         </DialogContent>
-        <DialogActions>
+        {/* <DialogActions>
           <Button autoFocus onClick={handleClose} color="primary">
             Save changes
           </Button>
-        </DialogActions>
+        </DialogActions> */}
       </Dialog>
     </div>
   );
