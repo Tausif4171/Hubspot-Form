@@ -6,7 +6,6 @@ import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import MuiDialogTitle from "@material-ui/core/DialogTitle";
 import MuiDialogContent from "@material-ui/core/DialogContent";
-import MuiDialogActions from "@material-ui/core/DialogActions";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
@@ -49,13 +48,6 @@ const DialogContent = withStyles((theme) => ({
   },
 }))(MuiDialogContent);
 
-const DialogActions = withStyles((theme) => ({
-  root: {
-    margin: 0,
-    padding: theme.spacing(1),
-  },
-}))(MuiDialogActions);
-
 function MyPage(props) {
   const [open, setOpen] = React.useState(false);
 
@@ -84,9 +76,7 @@ function MyPage(props) {
 
     if (open) {
       script.addEventListener("load", () => {
-        // @TS-ignore
         if (window.hbspt) {
-          // @TS-ignore
           window.hbspt.forms.create({
             portalId: "6485032",
             formId: "9fc93abc-a8c7-48de-a6d5-2a3c1583e64f",
@@ -135,11 +125,6 @@ function MyPage(props) {
         <DialogContent>
           <div id="my-hubspot-form"></div>
         </DialogContent>
-        {/* <DialogActions>
-          <Button autoFocus onClick={handleClose} color="primary">
-            Save changes
-          </Button>
-        </DialogActions> */}
       </Dialog>
     </div>
   );
