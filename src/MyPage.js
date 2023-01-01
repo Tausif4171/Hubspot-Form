@@ -66,12 +66,16 @@ function MyPage(props) {
     setOpen(false);
   };
 
-  // const { loaded, error, formCreated } = useHubspotForm({
-  //   portalId: "23633466",
-  //   formId: "5641b914-ab3b-4e0d-a6de-a1869c557d6c",
-  //   target: "#my-hubspot-form",
-  // });
-  const [show, setShow] = useState(false);
+  // const { loaded, error, formCreated } = useHubspotForm(
+  //   open
+  //     ? {
+  //         portalId: "23633466",
+  //         formId: "5641b914-ab3b-4e0d-a6de-a1869c557d6c",
+  //         target: "#my-hubspot-form",
+  //       }
+  //     : null,
+  // );
+  // const [show, setShow] = useState(false);
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -96,7 +100,7 @@ function MyPage(props) {
   return (
     <div style={{ margin: "0px 120px" }}>
       <h1 style={{ color: "#ff7a59" }}>Hubspot Form</h1>
-      <button
+      {/* <button
         style={{
           color: "#ff7a59",
           backgroundColor: "white",
@@ -105,11 +109,20 @@ function MyPage(props) {
         onClick={() => setShow(true)}
       >
         FORM
-      </button>
+      </button> */}
       {/* <div id="my-hubspot-form"></div> */}
 
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open dialog
+      <Button
+        variant="outlined"
+        color="primary"
+        onClick={handleClickOpen}
+        style={{
+          color: "#ff7a59",
+          backgroundColor: "white",
+          borderRadius: "14px",
+        }}
+      >
+        FORM
       </Button>
       <Dialog
         onClose={handleClose}
@@ -117,7 +130,7 @@ function MyPage(props) {
         open={open}
       >
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          Modal title
+          GST Verification Purpose
         </DialogTitle>
         <DialogContent>
           <div id="my-hubspot-form"></div>
