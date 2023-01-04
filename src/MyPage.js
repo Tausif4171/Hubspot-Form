@@ -102,25 +102,47 @@ function MyPage(props) {
       </button> */}
       {/* <div id="my-hubspot-form"></div> */}
 
-      <Button
-        variant="outlined"
-        color="primary"
-        onClick={handleClickOpen}
+      {/* CTA */}
+
+      <div
         style={{
-          color: "#ff7a59",
-          backgroundColor: "white",
-          borderRadius: "14px",
+          display: "flex",
+          justifyContent: "space-between",
+          width: "98%",
+          background: "linear-gradient(to right,#cee7ef,#97dafc,#4472c4)",
+          height: "57%",
+          marginTop: "20px",
+          padding: "40px",
         }}
       >
-        FORM
-      </Button>
+        <div>
+          <h4 style={{ color: "black" }}>
+            Run GST Verification Checks in Bulk. Try Bulk Upload.
+          </h4>
+        </div>
+        <div>
+          <Button
+            variant="contained"
+            // color="primary"
+            onClick={handleClickOpen}
+            style={{
+              color: "white",
+              backgroundColor: "#003d8e",
+              fontSize: "14px",
+              // borderRadius: "14px",
+            }}
+          >
+            Request a quote
+          </Button>
+        </div>
+      </div>
       <Dialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
       >
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          GST Verification Purpose
+          Let us know your requirements
         </DialogTitle>
         <DialogContent>
           <div id="my-hubspot-form"></div>
