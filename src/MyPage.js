@@ -28,7 +28,15 @@ const DialogTitle = withStyles(styles)((props) => {
   const { children, classes, onClose, ...other } = props;
   return (
     <MuiDialogTitle disableTypography className={classes.root} {...other}>
-      <Typography variant="h6">{children}</Typography>
+      <Typography
+        style={{
+          fontSize: "26px",
+          margin: "0px 0px 14px 0px",
+          textAlign: "center",
+        }}
+      >
+        {children}
+      </Typography>
       {onClose ? (
         <IconButton
           aria-label="close"
@@ -116,9 +124,9 @@ function MyPage(props) {
         }}
       >
         <div>
-          <h4 style={{ color: "black" }}>
+          <h2 style={{ color: "black" }}>
             Run GST Verification Checks in Bulk. Try Bulk Upload.
-          </h4>
+          </h2>
         </div>
         <div>
           <Button
@@ -129,6 +137,7 @@ function MyPage(props) {
               color: "white",
               backgroundColor: "#003d8e",
               fontSize: "14px",
+              margin: "15px 0px",
               // borderRadius: "14px",
             }}
           >
