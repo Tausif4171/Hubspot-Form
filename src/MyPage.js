@@ -9,6 +9,8 @@ import MuiDialogContent from "@material-ui/core/DialogContent";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
+import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
 
 const styles = (theme) => ({
   root: {
@@ -22,6 +24,11 @@ const styles = (theme) => ({
     top: theme.spacing(1),
     color: theme.palette.grey[500],
   },
+  // paper: {
+  //   padding: theme.spacing(1),
+  //   textAlign: "center",
+  //   color: theme.palette.text.secondary,
+  // },
 });
 
 const DialogTitle = withStyles(styles)((props) => {
@@ -116,7 +123,7 @@ function MyPage(props) {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          width: "98%",
+          width: "auto",
           background: "linear-gradient(to right,#cee7ef,#97dafc,#4472c4)",
           height: "57%",
           marginTop: "20px",
@@ -144,6 +151,110 @@ function MyPage(props) {
             Request a quote
           </Button>
         </div>
+      </div>
+      {/* Second CTA */}
+      <div
+        style={{
+          background: "linear-gradient(to right,#cee7ef,#97dafc,#4472c4)",
+          marginTop: "54px",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            width: "auto",
+            height: "57%",
+            marginTop: "20px",
+            padding: "40px",
+          }}
+        >
+          <div>
+            <h3 style={{ color: "black" }}>
+              Run Complete Due Diligence Risk Checks.
+            </h3>
+          </div>
+          <div>
+            <Button
+              variant="contained"
+              // color="primary"
+              onClick={handleClickOpen}
+              style={{
+                color: "white",
+                backgroundColor: "#003d8e",
+                fontSize: "14px",
+                margin: "5px 0px",
+                // borderRadius: "14px",
+              }}
+            >
+              Request a quote
+            </Button>
+          </div>
+        </div>
+        <Grid container spacing={1} style={{ padding: "0px 0px 25px 26px" }}>
+          <Grid container item xs={12} spacing={3}>
+            <Grid item xs={4}>
+              <Paper
+                style={{
+                  background: "rgb(0, 61, 142)",
+                  color: "white",
+                  padding: "10px 0px",
+                  textAlign: "left",
+                }}
+              >
+                <ul>
+                  <li>Financial Health Checks</li>
+                  <li>Adverse Litigation Checks</li>
+                  <li>Adverse Media Checks</li>
+                  <li>Promoter Background Checks</li>
+                  <li>Business Registration & Essential Checks</li>
+                  <li>FCPA ( Foreign Corrupt Practices Act)</li>
+                  <li>ESG Checks</li>
+                </ul>
+              </Paper>
+            </Grid>
+            <Grid item xs={4}>
+              <Paper
+                style={{
+                  background: "rgb(0, 61, 142)",
+                  color: "white",
+                  padding: "10px 0px",
+                  textAlign: "left",
+                }}
+              >
+                <ul>
+                  <li>GST Compliance Checks</li>
+                  <li>Financial Quality & Credit Checks</li>
+                  <li>Historic Financial Checks</li>
+                  <li>Headcount Checks</li>
+                  <li>Corporate Governance Checks</li>
+                  <li>Anti-bribery and corruption (ABC) Checks</li>
+                  <li>UK Bribery Act Checks</li>
+                </ul>
+              </Paper>
+            </Grid>
+            <Grid item xs={4}>
+              <Paper
+                style={{
+                  background: "rgb(0, 61, 142)",
+                  color: "white",
+                  padding: "10px 0px",
+                  textAlign: "left",
+                }}
+              >
+                <ul>
+                  <li>AML, Sanctions Lists & PEP Checks</li>
+                  <li>Ultimate Beneficiary Analysis</li>
+                  <li>Reputation Checks</li>
+                  <li>Customer Sentiment Analysis</li>
+                  <li>Regulatory & Economic Default Checks</li>
+                  <li>GRC Mandates</li>
+                  <li>Modern Slavery Checks</li>
+                </ul>
+              </Paper>
+            </Grid>
+          </Grid>
+        </Grid>
       </div>
       <Dialog
         onClose={handleClose}
